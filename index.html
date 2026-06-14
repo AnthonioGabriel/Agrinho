@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte: Futuro Sustentável</title>
+    <title>EcoAgro: O Equilíbrio do Futuro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>🌱 Agro Forte, Futuro Sustentável</h1>
-        <p>Mantenha o equilíbrio entre produção e meio ambiente.</p>
+        <h1>🌱 EcoAgro</h1>
+        <h2>O Equilíbrio do Futuro</h2>
+
+        <div class="intro">
+            <p>
+                Sua missão é administrar uma fazenda de forma responsável,
+                equilibrando a produção agrícola com a preservação do meio ambiente.
+            </p>
+        </div>
 
         <div class="status">
-            <p>🌾 Produção: <span id="producao">50</span></p>
-            <p>🌎 Sustentabilidade: <span id="sustentabilidade">50</span></p>
-            <p>📅 Rodada: <span id="rodada">1</span>/5</p>
+            <div>
+                <p>🌾 Produção</p>
+                <progress id="barraProducao" value="50" max="100"></progress>
+                <span id="producao">50</span>
+            </div>
+
+            <div>
+                <p>🌎 Sustentabilidade</p>
+                <progress id="barraSustentabilidade" value="50" max="100"></progress>
+                <span id="sustentabilidade">50</span>
+            </div>
         </div>
+
+        <p><strong>Rodada:</strong> <span id="rodada">1</span>/5</p>
 
         <div id="cenario"></div>
 
-        <button onclick="escolha(0)" id="op1"></button>
-        <button onclick="escolha(1)" id="op2"></button>
+        <button id="op1" onclick="escolha(0)"></button>
+        <button id="op2" onclick="escolha(1)"></button>
 
         <div id="resultado"></div>
+
+        <button id="reiniciar" onclick="location.reload()" style="display:none;">
+            Jogar Novamente
+        </button>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
